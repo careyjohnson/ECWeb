@@ -35,6 +35,7 @@ body {
   animation-fill-mode: none;
   animation-play-state: running;
 }
+
 .navbar-nav {
   padding: 10px;
 }
@@ -73,6 +74,7 @@ ul > li > a.nav-link:hover {
   width: 95%;
   /* border-radius: 5%; */
 }
+
 /*---Firefox Bug Fix --*/
 .carousel-item {
   transition: -webkit-transform 0.5s ease;

@@ -1,12 +1,12 @@
+ <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lens project</title>
-    <!-- Page icon -->
-    <link rel="shortcut icon" href="images/anh_page.png" />
-    <!-- Style sheet -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Trang chủ</title>
+<link rel="shortcut icon" href="images/anh_page.png" />
+<!-- Style sheet -->
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -22,135 +22,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-  </head>
-
-  <body>
-    <header>FREE SHIP CHO MỌI ĐƠN HÀNG TRÊN 2,000,0000 VND</header>
-    <nav
-      class="navbar navbar-expand-md navbar-light bg-light sticky-header"
-      id="bg-black"
-    >
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><img
-            src="images/anh_logo1.png"
-            style="height: 100px; width: 150px"
-            alt="logo"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html"
-                >Trang chủ <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbar-sanpham"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Sản phẩm</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="navbar-sanpham">
-                <li>
-                  <a class="dropdown-item" href="lens_mau.html">Lens màu</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="lens_nhu.html">Lens nhũ</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="lens_trongsuot.html"
-                    >Lens trong suốt</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="lens_mattho.html"
-                    >Lens cho mắt thở</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbar-sanpham"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Phụ kiện</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="navbar-sanpham">
-                <li>
-                  <a class="dropdown-item" href="coc_dunglens.html"
-                    >Cốc rửa lens</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="nuocngamlens.html"
-                    >Nước ngâm lens</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="mayrualens.html"
-                    >Máy rửa lens</a
-                  >
-                </li>
-                <li>
-                  <a class="dropdown-item" href="thuocnhomatlens.html"
-                    >Thuốc nhỏ mắt lens</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Liên hệ</a>
-            </li>
-          </ul>
-        </div>
-        <a href="account.html"
-          ><img
-            src="images/icon_login.png"
-            style="height: 50px; width: 50px"
-            alt=""
-        /></a>
-        <form class="form-inline">
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-        <a href="index.html"
-          ><img
-            src="images/icon_shopping2.png"
-            style="height: 70px; width: 70px"
-        /></a>
-      </div>
-    </nav>
-
-    <!-- Image Slider -->
-    <div
+</head>
+<body>
+<jsp:include page="header.jsp"></jsp:include>
+<%-- <h4 style="color"><%= session.getAttribute("username") %></h4> --%>
+ <!-- Image Slider -->
+<div
       id="carouselExampleIndicators"
       class="carousel slide"
       data-ride="carousel"
@@ -297,8 +174,9 @@
         </div>
       </div>
     </div>
+    
     <!-- Three Column Section -->
-
+    
     <div class="container-fluid padding">
       <div class="row padding">
         <div class="col-12 col-md-6">
@@ -404,7 +282,8 @@
         </div>
       </div>
     </div>
-
+    
+    
     <hr
       style="
         width: 50%;
@@ -514,7 +393,7 @@
         background-color: gray;
       "
     />
-    <!-- Phu kien -->
+     <!-- Phu kien -->
     <div class="container-fluid padding">
       <div class="row welcome text-center">
         <div class="col-12">
@@ -632,89 +511,6 @@
         </div>
       </div>
     </div>
-    <hr
-      style="
-        width: 50%;
-        height: 2px;
-        border-width: 0;
-        color: gray;
-        background-color: gray;
-      "
-    />
-
-    <div class="container-fluid padding">
-      <div class="row text-center padding">
-        <div class="col-12">
-          <h2>Contact us</h2>
-        </div>
-        <div class="col-12 social padding">
-          <a href="https://www.facebook.com/thuylinh2114"
-            ><i class="fab fa-facebook"></i
-          ></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-google-plus-g"></i></a>
-          <a href="https://www.instagram.com/214__thuyflinh/"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-    </div>
-    <footer>
-      <div class="container-fluid padding">
-        <div class="row text-center">
-          <div class="col-md-4" id="ft">
-            <img
-              src="images/footer_2.png"
-              style="margin-top: 10px; height: 50px; width: 320px"
-            />
-            <hr class="light" />
-            <p>Hotline: 19001001</p>
-            <p>linh60725@gmail.com</p>
-            <p>Dai Ang,Thanh Tri, Hanoi, Vietnam</p>
-          </div>
-          <div class="col-md-4" id="ft">
-            <hr class="light" />
-            <h5>Sản phẩm</h5>
-            <hr class="light" />
-            <p>Lens màu</p>
-            <p>Lens vân nhũ</p>
-            <p>Lens trong suốt</p>
-            <p>Lens cho mắt thở</p>
-            <p></p>
-          </div>
-          <div class="col-md-4" id="ft">
-            <hr class="light" />
-            <h5>Phụ kiện</h5>
-            <hr class="light" />
-            <p>Cốc rửa lens</p>
-            <p>Nước ngâm lens</p>
-            <p>Thuốc nhỏ mắt lens</p>
-          </div>
-
-          <div class="col-12">
-            <hr class="light-100" />
-            <h5>&copy; Designed by Linh Thuy</h5>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script>
-      (function ($) {
-        "use strict";
-        new WOW().init();
-
-        //sticky navbar
-        $(window).on("scroll", function () {
-          var scroll = $(window).scrollTop();
-          if (scroll < 100) {
-            $(".sticky-header").removeClass("sticky");
-          } else {
-            $(".sticky-header").addClass("sticky");
-          }
-        });
-      })(jQuery);
-    </script>
-  </body>
+   <jsp:include page="footer.jsp"></jsp:include> 
+</body>
 </html>
