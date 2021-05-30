@@ -11,19 +11,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.bean.UserBean;
-import com.dao.RegisterDao;
+import com.dao.ForgetPasswordDao;
 
 /**
- * Servlet implementation class RegisterController
+ * Servlet implementation class ForgetPasswordController
  */
-@WebServlet("/register")
-public class RegisterController extends HttpServlet {
+@WebServlet("/reset")
+public class ForgetPasswordController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public RegisterController() {
+    public ForgetPasswordController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,7 +32,8 @@ public class RegisterController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -40,27 +41,26 @@ public class RegisterController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username=request.getParameter("username");
-		String password=request.getParameter("password");
+		String newPassword=request.getParameter("newPassword");
 		String email=request.getParameter("email");
 		
 		UserBean user=new UserBean();
 		user.setUsername(username);
-		user.setPassword(password);
+		user.setPassword(newPassword);
 		user.setEmail(email);
 		
-		RegisterDao registerDao=new RegisterDao();
-		UserBean createdUser=registerDao.createNewUser(user);
-		if(createdUser==null) {
-			request.setAttribute("registerMessage", "Tên đăng nhập đã được sử dụng.");
-			RequestDispatcher dispatcher=request.getRequestDispatcher("login.jsp");
+		ForgetPasswordDao forgetPasswordDao=new ForgetPasswordDao();
+		UserBean updatePassword=forgetPasswordDao.updatePassword(user);
+		if(updatePassword==null) {
+			request.setAttribute("forgetPasswordMessage", "Tên đăng nhập hoặc email không đúng.");
+			RequestDispatcher dispatcher=request.getRequestDispatcher("forget_password.jsp");
 			dispatcher.forward(request, response);
 		}else {
 			HttpSession httpSession = request.getSession();
-			httpSession.setAttribute("username", username);
-			httpSession.setAttribute("user", user);
+			httpSession.setAttribute("password", newPassword);
 			
-			request.setAttribute("registerMessage", "");
-			response.sendRedirect("login.jsp?msg=successful");
+			request.setAttribute("forgetPasswordMessage", "");
+			response.sendRedirect("login.jsp?msg=done");
 		}
 	}
 

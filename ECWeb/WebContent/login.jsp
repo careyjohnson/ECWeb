@@ -25,7 +25,31 @@
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
 <body>
-<jsp:include page="header.jsp"></jsp:include>
+ <nav
+      class="navbar navbar-expand-md navbar-light bg-light sticky-header"
+      id="bg-black"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.jsp" style="font-size:30px;"
+          ><img
+            src="images/anh_logo1.png"
+            style="height: 100px; width: 150px; margin-left:100px;"
+            alt="logo"
+        />Lin's Lens</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button> 
+        </div>
+    </nav>
+
 
   <!-------account-------->
  
@@ -56,7 +80,7 @@
               <input id="ip" type="text" placeholder="Tên đăng nhập" name="username" required>
               <input id="ip" type="password" placeholder="Mật khẩu" name="password" required>
               <button type="submit" class="bt" name="login">Đăng nhập</button>
-              <a href="" style="text-decoration: none; color: black">Quên mật khẩu</a>
+              <a href="forget_password.jsp" style="text-decoration: none; color: black">Quên mật khẩu?</a>
               <% String loginMessage=(String) request.getAttribute("loginMessage");
               	String registerMessage=(String) request.getAttribute("registerMessage");
               	if(loginMessage!=null){
@@ -65,6 +89,15 @@
               <% } if(registerMessage!=null){ %>
               <h4 style="font-size: 15px;color:red; margin-top:10px"><%= request.getAttribute("registerMessage") %></h4>
               <% } else { out.print("");} %>
+              <% 
+              	String msg=request.getParameter("msg");
+              	if("done".equals(msg)){
+              %>
+              <h4 style="font-size: 15px;color:red; margin-top:10px">Đổi mật khẩu thành công!</h4>
+              <% } else if("successful".equals(msg)){
+              	%>
+             	<h4 style="font-size: 15px;color:red; margin-top:10px">Đăng ký thành công!</h4>
+              	<% } %>
           </form>
           
         </div>
