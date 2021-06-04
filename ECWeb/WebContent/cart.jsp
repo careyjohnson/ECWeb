@@ -37,7 +37,6 @@
             </div>
     </section>
     <!---End of Hero Section-->
-
 	<section class="mt-5">
         <div class="container">
             <div class="cart">
@@ -55,7 +54,7 @@
                         <tr>
                             <td>
                                 <div class="main">
-                     <!--W=145 H=98--> <img src="images/Sapa_Gray.jpg"alt="" style="height: 200px;width: 200px;">
+                     <!--W=145 H=98--> <img src="images/Sapa_Gray.jpg"alt="" style="height: 120px;width: 120px;">
                                     <div class="des">
                                         <p>Sapa Gray </p>
                                         <br>
@@ -86,7 +85,7 @@
                             <td>
                                 <div class="main">
                                 
-                     <!--W=145 H=98--> <img src="images/Smokey_Gray2.jpg"alt="" style="height: 200px;width: 200px;">
+                     <!--W=145 H=98--> <img src="images/Smokey_Gray2.jpg"alt="" style="height: 120px;width: 120px;">
                                   
                                     <div class="des">
                                         <p>Smokey Gray</p>
@@ -115,7 +114,7 @@
                             <td>
                                 <div class="main">
                                    
-                     <!--W=145 H=98--> <img src="images/Silky_Gray.jpg"alt="" style="height: 200px;width: 200px;">
+                     <!--W=145 H=98--> <img src="images/Silky_Gray.jpg"alt="" style="height: 120px;width: 120px;">
                                    
                                     <div class="des">
                                         <p>Silky Gray</p>
