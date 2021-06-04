@@ -10,7 +10,7 @@ public class ConnectionUtils {
 		String hostName="localhost";
 		String databaseName="ecweb";
 		String userName="root";
-		String password="Mai@12012000";
+		String password="123456";
 		return getMysqlConnection(hostName,databaseName, userName,password);
 		
 	}
