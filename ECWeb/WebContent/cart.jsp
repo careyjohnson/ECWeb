@@ -148,22 +148,6 @@
     </section>
     <hr style="width:50%; height:2px;border-width:0;color:gray;background-color:gray">
 
-    <!-- <div class="total-price">
-        <table>
-            <tr>
-                <td>Subtotal</td>
-                <td>900,000 VND</td>
-            </tr>
-            <tr>
-                <td>Tax</td>
-                <td>30,000 VND</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>930,000 VND</td>
-            </tr>
-        </table>
-    </div> -->
 
     <div class="col-lg-4 offset-lg-4">
         <div class="checkout">
